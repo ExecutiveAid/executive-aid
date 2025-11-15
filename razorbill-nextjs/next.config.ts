@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: '',
   assetPrefix: '',
+  turbopack: {
+    root: __dirname // This tells Turbopack to use the Next.js app directory as root
+  }
 };
 
 export default nextConfig;

@@ -1,20 +1,21 @@
 {
-  "name": "executive-aid-deployment",
+  "name": "razorbill-technologies-deployment",
   "version": "1.0.0",
-  "description": "ExecutiveAid deployment configuration",
+  "description": "Razorbill Technologies deployment configuration",
   "scripts": {
-    "dev": "cd executive-aid-nextjs && npm run dev",
-    "build": "cd executive-aid-nextjs && npm run build",
-    "start": "cd executive-aid-nextjs && npm run start",
-    "lint": "cd executive-aid-nextjs && npm run lint",
-    "install-deps": "cd executive-aid-nextjs && npm install"
+    "dev": "cd razorbill-nextjs && npm run dev",
+    "build": "cd razorbill-nextjs && npm run build",
+    "start": "cd razorbill-nextjs && npm run start",
+    "lint": "cd razorbill-nextjs && npm run lint",
+    "install-deps": "cd razorbill-nextjs && npm install"
   },
   "keywords": [
     "nextjs",
     "typescript",
-    "executive-aid"
+    "razorbill",
+    "razorbill-technologies"
   ],
-  "author": "Executive Aid",
+  "author": "Razorbill Technologies",
   "license": "ISC",
   "dependencies": {
     "swiper": "^11.2.10"

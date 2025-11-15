@@ -1,81 +1,43 @@
-# ExecutiveAid - Deployment Configuration
+# Razorbill Technologies — Local development
 
-This repository contains the ExecutiveAid website with deployment configuration pointing to the Next.js version.
+This repository now contains the Razorbill Technologies website source. For now we focus on local development (deployment configs are left unchanged).
 
-## Project Structure
+## Project layout (unchanged)
 
 ```
 ExecutiveAid/
 ├── executive-aid/          # Original React app (deprecated)
-├── executive-aid-nextjs/   # New Next.js + TypeScript app (ACTIVE)
-├── vercel.json            # Vercel deployment configuration
-├── netlify.toml          # Netlify deployment configuration
-└── package.json          # Root deployment scripts
+├── executive-aid-nextjs/   # Next.js + TypeScript app (ACTIVE)
+├── vercel.json            # Vercel deployment configuration (left for later)
+├── netlify.toml          # Netlify deployment configuration (left for later)
+└── package.json          # Root scripts for local workflows
 ```
 
-## 🚀 Deployment
+## � Local development quick start
 
-The deployment is configured to use the **Next.js version** in the `executive-aid-nextjs/` directory.
+1. From the repo root, install app dependencies and run the dev server:
 
-### Quick Deploy
-
-#### Option 1: Vercel (Recommended)
-1. Connect your repository to Vercel
-2. The `vercel.json` file will automatically configure the deployment
-3. Deploy automatically
-
-#### Option 2: Netlify
-1. Connect your repository to Netlify
-2. The `netlify.toml` file will configure the build settings
-3. Deploy automatically
-
-#### Option 3: Manual Build
 ```bash
-# Install dependencies
+# Install dependencies for the Next.js app
 npm run install-deps
-
-# Build for production
-npm run build
-
-# Start production server (for testing)
-npm run start
-```
-
-## 🛠️ Development
-
-To work on the Next.js version:
-
-```bash
-# Navigate to the Next.js directory
-cd executive-aid-nextjs
-
-# Install dependencies
-npm install
 
 # Start development server
 npm run dev
 ```
 
-## 📁 Active Project
+Notes:
+- `npm run install-deps` will `cd` into `executive-aid-nextjs` and run `npm install`.
+- `npm run dev` runs the Next.js dev server (via the root package scripts which cd into the app).
 
-**Current deployment points to**: `executive-aid-nextjs/`
+## What changed now
 
-This directory contains:
-- Next.js 15 with TypeScript
-- Tailwind CSS styling
-- Optimized images and assets
-- Contact forms with Formspree
-- Responsive design
-- SEO optimizations
+- Project metadata (package.json) was updated to reflect Razorbill Technologies for local identification.
+- Deployment files (`vercel.json`, `netlify.toml`) were intentionally left untouched — we can update them later when you want to deploy.
 
-## 🔧 Configuration Files
+## Next steps (optional)
 
-- `vercel.json` - Vercel deployment settings
-- `netlify.toml` - Netlify deployment settings
-- `executive-aid-nextjs/next.config.ts` - Next.js configuration with static export
+- Replace branding assets in `executive-aid-nextjs/public/` (logos, images).
+- Update `src/` (site titles, meta tags, and visible text) to show Razorbill branding.
+- Rename folders and update CI/deployment configs if you want repository directory names to reflect the new brand.
 
-## 📝 Notes
-
-- The original React app in `executive-aid/` is kept for reference but is not deployed
-- All deployment commands automatically target the Next.js version
-- Static export is enabled for maximum compatibility with hosting platforms 
+If you want, I can now update branding assets and `src/` text next — tell me which you'd like first.
