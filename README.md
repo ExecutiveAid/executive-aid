@@ -1,19 +1,18 @@
 # Razorbill Technologies — Local development
 
-This repository now contains the Razorbill Technologies website source. For now we focus on local development (deployment configs are left unchanged).
+This repository contains the Razorbill Technologies website source.
 
-## Project layout (unchanged)
+## Project layout
 
 ```
-ExecutiveAid/
-├── executive-aid/          # Original React app (deprecated)
-├── executive-aid-nextjs/   # Next.js + TypeScript app (ACTIVE)
-├── vercel.json            # Vercel deployment configuration (left for later)
-├── netlify.toml          # Netlify deployment configuration (left for later)
+razorbill/
+├── razorbill-nextjs/      # Next.js + TypeScript app (ACTIVE)
+├── vercel.json            # Vercel deployment configuration
+├── netlify.toml          # Netlify deployment configuration
 └── package.json          # Root scripts for local workflows
 ```
 
-## � Local development quick start
+## 🚀 Local development quick start
 
 1. From the repo root, install app dependencies and run the dev server:
 
@@ -26,18 +25,11 @@ npm run dev
 ```
 
 Notes:
-- `npm run install-deps` will `cd` into `executive-aid-nextjs` and run `npm install`.
+- `npm run install-deps` will `cd` into `razorbill-nextjs` and run `npm install`.
 - `npm run dev` runs the Next.js dev server (via the root package scripts which cd into the app).
 
-## What changed now
+## What changed
 
-- Project metadata (package.json) was updated to reflect Razorbill Technologies for local identification.
-- Deployment files (`vercel.json`, `netlify.toml`) were intentionally left untouched — we can update them later when you want to deploy.
-
-## Next steps (optional)
-
-- Replace branding assets in `executive-aid-nextjs/public/` (logos, images).
-- Update `src/` (site titles, meta tags, and visible text) to show Razorbill branding.
-- Rename folders and update CI/deployment configs if you want repository directory names to reflect the new brand.
-
-If you want, I can now update branding assets and `src/` text next — tell me which you'd like first.
+- Project metadata (package.json) updated to reflect Razorbill Technologies
+- Deployment files (`vercel.json`, `netlify.toml`) updated to use `razorbill-nextjs` directory
+- All branding updated to Razorbill Technologies

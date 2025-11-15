@@ -1,6 +1,6 @@
-# ExecutiveAid - Next.js + TypeScript Website
+# Razorbill Technologies - Next.js + TypeScript Website
 
-A modern, high-performance website for ExecutiveAid Virtual Assistant services, rebuilt using Next.js 15, TypeScript, and Tailwind CSS.
+A modern, high-performance website for Razorbill Technologies, built using Next.js 15, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 
@@ -16,16 +16,20 @@ A modern, high-performance website for ExecutiveAid Virtual Assistant services, 
 ## 📁 Project Structure
 
 ```
-executive-aid-nextjs/
+razorbill-nextjs/
 ├── src/
 │   ├── app/
 │   │   ├── globals.css
 │   │   ├── layout.tsx
-│   │   └── page.tsx
+│   │   ├── page.tsx
+│   │   └── policies/
 │   ├── components/
 │   │   ├── CTAForm.tsx
 │   │   ├── FooterForm.tsx
-│   │   └── HeroForm.tsx
+│   │   ├── HeroForm.tsx
+│   │   ├── HeroCarousel.tsx
+│   │   ├── Navigation.tsx
+│   │   └── StructuredData.tsx
 │   └── hooks/
 │       └── useScrollAnimation.ts
 ├── public/
@@ -37,7 +41,7 @@ executive-aid-nextjs/
 
 1. **Clone and navigate to the project:**
    ```bash
-   cd executive-aid-nextjs
+   cd razorbill-nextjs
    ```
 
 2. **Install dependencies:**
@@ -144,4 +148,4 @@ To complete the full website functionality, you can:
 
 ---
 
-**ExecutiveAid** - Efficiency Redefined. 🚀
+**Razorbill Technologies** - Enterprise Solutions for Modern Businesses. 🚀
