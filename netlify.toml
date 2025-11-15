@@ -1,6 +1,6 @@
 [build]
-  command = "cd executive-aid-nextjs && npm install && npm run build"
-  publish = "executive-aid-nextjs/out"
+  command = "cd razorbill-nextjs && npm install && npm run build"
+  publish = "razorbill-nextjs/out"
   base = "/"
 
 [build.environment]

@@ -6,16 +6,9 @@ import {
   Phone, 
   Instagram, 
   Linkedin,
-  CheckCircle,
-  BarChart3,
-  Users,
-  Globe,
-  MessageCircle,
   Twitter
 } from 'lucide-react';
 
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { HeroForm } from '@/components/HeroForm';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -23,11 +16,6 @@ import Navigation from '@/components/Navigation';
 
 export default function HomeClient() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  // Scroll animation hooks for different sections
-  const [helpCard1Ref, helpCard1Visible] = useScrollAnimation();
-  const [helpCard2Ref, helpCard2Visible] = useScrollAnimation();
 
   // Handle scroll effect for navigation
   useEffect(() => {
@@ -370,8 +358,8 @@ export default function HomeClient() {
       </div>
 
       {/* Image Section */}
-      <div className="md:w-1/2 p-6">
-        <img src="/images/razorbill4.png" alt="How We Help" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100 rounded-lg" />
+      <div className="md:w-1/2 p-6 relative">
+        <Image src="/images/razorbill4.png" alt="How We Help" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100 rounded-lg" />
       </div>
     </div>
 
@@ -431,8 +419,8 @@ export default function HomeClient() {
           </div>
 
           {/* Image Section */}
-          <div className="md:w-1/2 p-6">
-            <img src="images/razorbill/reservations.png" alt="What We Provide" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+          <div className="md:w-1/2 p-6 relative">
+            <Image src="/images/razorbill/reservations.png" alt="What We Provide" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
           </div>
         </div>
 
@@ -492,8 +480,8 @@ export default function HomeClient() {
           </div>
 
           {/* Image Section */}
-          <div className="md:w-1/2 p-6">
-            <img src="images/razorbill/events.png" alt="What We Provide" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+          <div className="md:w-1/2 p-6 relative">
+            <Image src="/images/razorbill/events.png" alt="What We Provide" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
           </div>
         </div>
 
@@ -552,8 +540,8 @@ export default function HomeClient() {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6">
-              <img src="/images/razorbill/booking-dashboard.png" alt="How We Help" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+            <div className="md:w-1/2 p-6 relative">
+              <Image src="/images/razorbill/booking-dashboard.png" alt="How We Help" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
             </div>
           </div>
 
@@ -626,8 +614,8 @@ export default function HomeClient() {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6">
-              <img src="/images/razorbill/contacts.png" alt="How We Help" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+            <div className="md:w-1/2 p-6 relative">
+              <Image src="/images/razorbill/contacts.png" alt="How We Help" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
             </div>
           </div>
 
@@ -679,8 +667,8 @@ export default function HomeClient() {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6">
-              <img src="/images/razorbill/deals.png" alt="What We Provide" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+            <div className="md:w-1/2 p-6 relative">
+              <Image src="/images/razorbill/deals.png" alt="What We Provide" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
             </div>
           </div>
 
@@ -739,8 +727,8 @@ export default function HomeClient() {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6">
-              <img src="/images/razorbill/customers.png" alt="How We Help" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+            <div className="md:w-1/2 p-6 relative">
+              <Image src="/images/razorbill/customers.png" alt="How We Help" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
             </div>
           </div>
 
@@ -784,8 +772,8 @@ export default function HomeClient() {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6">
-              <img src="/images/razorbill/CRM.png" alt="What We Provide" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+            <div className="md:w-1/2 p-6 relative">
+              <Image src="/images/razorbill/CRM.png" alt="What We Provide" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
             </div>
             </div>
 
@@ -845,8 +833,8 @@ export default function HomeClient() {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6">
-              <img src="/images/razorbill/promotions.png" alt="What We Provide" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+            <div className="md:w-1/2 p-6 relative">
+              <Image src="/images/razorbill/promotions.png" alt="What We Provide" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
             </div>
           </div>
 
@@ -906,8 +894,8 @@ export default function HomeClient() {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6">
-              <img src="/images/razorbill/campaigns.png" alt="What We Provide" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+            <div className="md:w-1/2 p-6 relative">
+              <Image src="/images/razorbill/campaigns.png" alt="What We Provide" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
             </div>
            </div>
 
@@ -967,8 +955,8 @@ export default function HomeClient() {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6">
-              <img src="/images/razorbill/reports.png" alt="What We Provide" className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
+            <div className="md:w-1/2 p-6 relative">
+              <Image src="/images/razorbill/reports.png" alt="What We Provide" width={600} height={400} className="w-full h-full object-cover opacity-90 transition duration-300 hover:opacity-100" />
             </div>
             </div>
            </div>

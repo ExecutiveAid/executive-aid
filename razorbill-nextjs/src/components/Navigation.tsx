@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface NavigationProps {
   isScrolled: boolean;
@@ -10,19 +11,18 @@ interface NavigationProps {
   contactLink?: string;
 }
 
+const navItems = [
+  { href: '/', label: 'Home', id: 'home' },
+  { href: '#bookmyspot', label: 'BookMySpot', id: 'bookmyspot' },
+  { href: '#focuscrm', label: 'Focus', id: 'focuscrm' },
+  { href: '#solutions', label: 'Coming Soon', id: 'solutions' },
+];
+
 export default function Navigation({ isScrolled, currentPage, contactLink = "#footer" }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("home");
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
-
-  const navItems = [
-    { href: '/', label: 'Home', id: 'home' },
-    { href: '#bookmyspot', label: 'BookMySpot', id: 'bookmyspot' },
-    { href: '#focuscrm', label: 'Focus', id: 'focuscrm' },
-    { href: '#solutions', label: 'Coming Soon', id: 'solutions' },
-  ];
   
    // Highlight active section while scrolling
   useEffect(() => {
@@ -33,12 +33,11 @@ export default function Navigation({ isScrolled, currentPage, contactLink = "#fo
         if (item.href.startsWith('#')) {
           const section = document.querySelector(item.href) as HTMLElement;
           if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
-            setActiveSection(item.id);
+            // Active section tracking (can be used for future enhancements)
             return;
           }
         }
       }
-      setActiveSection('home');
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -66,7 +65,7 @@ export default function Navigation({ isScrolled, currentPage, contactLink = "#fo
         {/* Left: Logo + Brand */}
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex-shrink-0">
-            <img
+            <Image
               src="/images/razorbill-logo.png"
               alt="Razorbill Logo"
               width={50}
